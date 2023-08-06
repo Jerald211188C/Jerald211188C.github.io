@@ -5,35 +5,202 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer>
+    <script src="script.js" defer></script>
+    <title>01_Jerald_211188C_A2</title>
 
-    </script>
-    <title>Document</title>
 </head>
 
 <body>
-    <header>
-        <h1>Main Topic</h1>
-    </header>
-    <nav> <!--menu systtm-->
-        <button id="hamIcon">Menu</button>
-        <ul id="menuList">
-            <li><button id="page1btn">Sub Topic 1</button></li>
-            <li><button id="page2btn">Sub Topic 2</button></li>
-            <li><button id="page3btn">Sub Topic 3</button></li>
+
+    <nav>
+        <div class="logo">
+            <a href="index.html">Football</a>
+        </div>
+        <ul>
+            <li><a href="#players">Players</a></li>
+            <li><a href="#Rules">Rules</a></li>
+            <li><a href="#Positions">Positions</a></li>
+            <li><a href="#Quiz">Quiz</a></li>
+
         </ul>
+        <div class="menu-icon"></div>
     </nav>
-    <div id="pagecontainer">
-        <div class="page" id="page1">
-            page 1 content
-        </div>
-        <div class="page" id="page2">
-            page 2 content
-        </div>
-        <div class="page" id="page3">
-            page 3 content
+
+    <div class="soccer-pitch-bg">
+        <div class="big-text">
+            <div>Where Legends Are Born</div>
         </div>
     </div>
+    <div class="rules" id="players">
+        Players
+    </div>
+    <div class="player-info">
+        <div class="slideshow-container messi">
+            <div class="playershow fade">
+                <div class="numbertext">1 / 3</div>
+                <img class="Container-size" src="./Images/messi.jpg" alt="messi image" >
+            </div>
+
+            <div class="playershow fade">
+                <div class="numbertext">2 / 3</div>
+                <img class="Container-size" src="./Images/Ronaldo.jpg " alt="Ronaldo image" >
+            </div>
+
+            <div class="playershow fade">
+                <div class="numbertext">3 / 3</div>
+                <img  class="Container-size" src="./Images/ninja.jpg" alt="Mbappe image">
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <div class="nested-grid">
+            <h1 class="nested-item-0"> Player Infomation</h1>
+            <div class="nested-item-1" id="playerName">Name: Messi</div>
+            <div class="nested-item-1" id="dateOfBirth">Date of Birth: 24/6/1987</div>
+            <div class="nested-item-1" id="age">Age: 36</div>
+            <div class="nested-item-1" id="CurrentClub">Current Club: Inter Miami</div>
+            <div class="nested-item-1" id="Country">Country: Argentina</div>
+            <div class="nested-item-1" id="Height">Height: 1.70 Meters</div>
+        </div>
+
+        <div class="nested-grid-2">
+            <h1 class="nested-item-3">Biography</h1>
+            <div class="Biography" id="playerBiography">Lionel Messi,is an iconic footballer known for his extraordinary
+                talent and numerous
+                records. Rising from FC Barcelona's famed La Masia academy, Messi's mesmerizing skills, countless goals,
+                and individual accolades have cemented his status as one of the greatest players in football history.
+                With a legacy that includes numerous domestic and international titles, he continues to amaze fans and
+                inspire aspiring footballers worldwide.</div>
+            <div class="bio-credits">
+                <ul>
+                    <li>Credits: </li>
+                    <li><a href="https://twitter.com/FIFAWorldCup/status/1604498241021947904" target="_blank">Messi Image</a></li>
+                    <li><a href="https://twitter.com/RMFC_Frank/status/1626989470963712000" target="_blank">Ronaldo Image</a></li>
+                    <li>  <a href="https://www.gettyimages.com/detail/news-photo/kylian-mbappe-of-paris-saint-germain-during-the-french-news-photo/1242555834" target="_blank">Mbappe Image</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="rules" id="Rules">
+            Rules
+        </div>
+        <div class="rules-section">
+            <div class="offside-visual">
+                <canvas id="offside-canvas"></canvas>
+            </div>
+            <div class="offside-exp">The offside rule is a crucial aspect of football that aims to prevent players from
+                gaining an unfair advantage by positioning themselves ahead of the last defender when the ball is played
+                to them. A player is deemed offside if they are closer to the opponent's goal line than both the ball
+                and the second-to-last defender when the ball is passed to them.
+            </div>
+            <div><img class="handball" alt="HandBall image" src="./Images/messi-handball.jpg"></div>
+            <div class="offside-exp">The handball rule states that players are not allowed to deliberately handle or
+                control the ball with
+                their hands or arms, except for the goalkeeper within their penalty area. If a player handles the ball
+                in an intentional or unnatural manner, it results in a free-kick or penalty kick, depending on the
+                location of the offense.
+            </div>
+            <div><img class="foul" alt="Foul Ball image" src="./Images/foul.jpg"></div>
+            <div class="offside-exp">Foul and Free-Kick Rule: Fouls occur when a player makes illegal contact with an
+                opponent, such as tripping, pushing, or using excessive force. Depending on the severity and location of
+                the foul, the opposing team is awarded a free-kick, either direct or indirect. Direct free-kicks allow
+                the team to score directly from the kick, while indirect free-kicks require the ball to touch another
+                player before a goal can be scored.
+            </div>
+
+        </div>
+    </div>
+    <div>
+        <div class="rules" id="Positions">
+            Positions
+        </div>
+        <div class="Positions-section">
+            <div class="positioning"><img class="positioning-img" src="./Images/Positions.jpg" alt="Positions Image"></div>
+            <div class="positions-exp"></div>
+            <div class="button-position-sec">
+                <button class="submit">Previous</button>
+                <button class="submit">Next</button>
+            </div>
+        </div>
+
+    </div>
+    <div class="rules" id="Quiz">
+        Quiz
+    </div>
+    <div class="app">
+        <h1>Soccer Quiz</h1>
+        <div class="quiz">
+            <h2 id="question">Question goes here</h2>
+            <div id="answer-buttons">
+                <button class="btn">Answer 1</button>
+                <button class="btn">Answer 2</button>
+                <button class="btn">Answer 3</button>
+                <button class="btn">Answer 4</button>
+            </div>
+            <button id="next-btn">Next</button>
+        </div>
+    </div>
+    <footer>
+        <h1 class="section-header">Feedback Form</h1>
+        <div class="form-container">
+            <form>
+                <div class="form-group">
+                    <label for="quiz-feedback">How did you find the Quiz?</label>
+                    <input type="text" id="quiz-feedback">
+                </div>
+                <div class="form-group">
+                    <label for="quiz-score">How Much Did You Score For The Quiz?</label>
+                    <input type="text" id="quiz-score">
+                </div>
+                <div class="form-group">
+                    <label for="favorite-footballer">Who Is Your Favourite Footballer?</label>
+                    <input type="text" id="favorite-footballer">
+                </div>
+                <div class="form-group">
+                    <label for="positions-feedback">Is the Explanation Of The Positions Clear? (If No Please
+                        Elaborate)</label>
+                    <input type="text" id="positions-feedback">
+                </div>
+                <div class="form-group">
+                    <label for="rules-feedback">Is the Explanation Of The Rules Clear? (If No Please Elaborate)</label>
+                    <textarea id="rules-feedback"></textarea>
+
+                </div>
+                <div class="button-container">
+                    <input class="submit" type="submit" value="Submit">
+                    <input class="submit" type="reset" value="Clear">
+                </div>
+                <div class="qr-code-container">
+                    <img class="qr-code" src="./Images/qrcode.png" alt="QR Code">
+                </div>
+               
+            </form>
+        </div>
+    </footer>
+    <section>
+        <div class="Credits-bg">
+            <div class="Credits-header">
+                Credits
+            </div> 
+            <div class="Credits-background">
+                <div class="Credits">
+                    <a href="https://fcbayern.com/en" target="_blank">Bayern Stadium</a>
+                </div>
+                <div class="Credits">
+                    <a href="https://www.the-sun.com/sport/6886985/messi-handball-argentina-holland-world-cup-yellow-card/" target="_blank">Messi HandBall</a>
+                </div>
+               <div class="Credits">
+                    <a href="https://finance.yahoo.com/news/jurgen-klopp-hails-best-striker-111249493.html?guccounter=1&guce_referrer=aHR0cHM6Ly9sZW5zLmdvb2dsZS5jb20v&guce_referrer_sig=AQAAAImHgnPzKZPoVPdP3WQ4DTgETcJJaPTlT--K6UbIstrWM4V1DQ83hUGaXD9uecNxFTwD_SU_S49I6gGuEr1bwkI-QMaYuUA2L1rISQlBYj3KW2Do66Jo2u-HxLZ1EnXat-OXAOQqVRyKIT4-9GpWdvdyFu-uQsCgR9t1W_-T3rZz" target="_blank">Erling Haaland</a>
+                </div>
+                <div class="Credits">
+                    <a href="https://howtheyplay.com/team-sports/Positions-in-Soccer-and-Their-Roles" target="_blank">Soccer Positions</a>
+                </div>
+            </div>
+           
+        </div>
+    </section>
+
 </body>
 
 </html>
