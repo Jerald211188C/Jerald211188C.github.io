@@ -1,15 +1,17 @@
-
-
+/* Reset default styles and set global properties */
 * {
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
 }
 
 /*NavBar*/
 
+/* Navigation Bar styles */
 nav {
+  /* Set navigation bar properties */
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -25,6 +27,7 @@ nav {
 
 
 div.logo a {
+  /* Style for logo link */
   font-size: 3.5vw;
   color: white;
   font-weight: 600;
@@ -34,16 +37,20 @@ div.logo a {
 
 
 div.logo a:hover {
+  /* Style for logo link on hover */
   color: lightblue;
   transition: 0.5s;
 }
 
+/* Sticky navigation bar */
 .sticky {
   position: fixed;
   top: 0;
   width: 100%;
 }
 
+
+/* Navigation links styles */
 nav ul {
   display: flex;
   align-items: center;
@@ -83,7 +90,7 @@ nav ul li a:link {
   text-decoration: none;
 }
 
-
+/* Hamburger menu icon styles */
 .menu-icon {
   display: none;
   width: 5vw;
@@ -130,6 +137,7 @@ nav ul li a:link {
 
 /*NavBar*/
 
+/* Background image for the header section */
 .soccer-pitch-bg {
   height: 100vh;
   background-size: cover;
@@ -137,7 +145,7 @@ nav ul li a:link {
   background-image: url("./Images/pitch.jpg");
 }
 
-
+/* Big centered text style */
 .big-text {
   text-align: center;
   display: flex;
@@ -153,13 +161,16 @@ nav ul li a:link {
   text-shadow: 10px 10px 4px rgba(0, 0, 0, 0.8);
 }
 
+/* Player information and slideshow section styles */
 .player-info {
   display: grid;
   grid-template-columns: repeat(2, 2fr);
   grid-template-rows: repeat(2, 2fr);
 
+
 }
 
+/* Slideshow container styles */
 .messi {
   display: flex;
   justify-content: center;
@@ -173,10 +184,9 @@ nav ul li a:link {
 .nested-grid {
   display: grid;
   grid-template-columns: repeat(2, 2fr);
-  background-color:white ;
+  background-color: white;
   width: 100%;
-  border-right: 3px solid black;
-  border-left: 3px solid black;
+
 }
 
 .nested-grid>div {
@@ -199,8 +209,8 @@ nav ul li a:link {
   border-bottom: 3px solid black;
 
 }
-.nested-item-3
-{
+
+.nested-item-3 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -208,6 +218,7 @@ nav ul li a:link {
   border-right: 3px solid black;
   border-left: 3px solid black;
 }
+
 .nested-grid-2 {
   display: grid;
   grid-template-rows: repeat(2, 0.1fr);
@@ -227,29 +238,34 @@ nav ul li a:link {
   border-bottom: 3px solid black;
 
 }
-.bio-credits
-{
+
+.bio-credits {
   font-size: 1.2rem;
 }
+
 .bio-credits ul {
   list-style: none;
   display: flex;
   justify-content: center;
   flex-direction: row;
-  gap: 20px ;
+  gap: 20px;
   align-items: center;
   padding: 8%;
 
 }
 
 .bio-credits a {
-  color: black; /* Set the desired color for unvisited link */
-  text-decoration: none; /* Remove underline */
+  color: black;
+  /* Set the desired color for unvisited link */
+  text-decoration: none;
+  /* Remove underline */
 }
 
 .bio-credits a:hover {
-  color: blue; /* Set the color for the link when hovered */
-  text-decoration: underline; /* Add underline on hover if desired */
+  color: blue;
+  /* Set the color for the link when hovered */
+  text-decoration: underline;
+  /* Add underline on hover if desired */
 }
 
 .slideshow-container {
@@ -262,21 +278,22 @@ nav ul li a:link {
 
 }
 
+/* Slideshow item styles */
 .playershow {
   display: none;
   text-align: center;
-  margin-top: 2%  ;
+  margin-top: 2%;
   margin-bottom: 2%;
 }
 
-.Container-size
-{
+/* Slideshow image size */
+.Container-size {
   width: 70%;
 }
 
 /* Next & previous buttons */
-.prev
-{
+/* Previous and Next buttons styles */
+.prev {
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -291,6 +308,7 @@ nav ul li a:link {
   border-radius: 0 3px 3px 0;
   user-select: none;
 }
+
 .next {
   cursor: pointer;
   position: absolute;
@@ -322,7 +340,7 @@ nav ul li a:link {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-
+/* Fading animation for slideshow */
 /* Fading animation */
 .fade {
   animation-name: fade;
@@ -337,6 +355,7 @@ nav ul li a:link {
   position: absolute;
 }
 
+/* Rules section styles */
 .rules {
   background-color: #2C4B86;
   color: white;
@@ -346,6 +365,7 @@ nav ul li a:link {
   font-size: 50px;
 }
 
+/* Offside explanation styles */
 .offside {
   grid-column: 1/ span 2;
   text-align: center;
@@ -364,7 +384,7 @@ nav ul li a:link {
   grid-template-columns: repeat(2, 2fr);
 }
 
-
+/* Canvas styles */
 canvas {
   max-width: 100%;
   border: 1px solid #000;
@@ -376,6 +396,7 @@ canvas {
   background-color: #4CAF50;
 }
 
+/* Styles for various elements in offside explanation */
 .last-defender {
   fill: #0000FF;
 }
@@ -395,6 +416,8 @@ canvas {
   font-size: 15px;
 }
 
+
+/* Explanation for offside rule styles */
 .offside-exp {
 
   display: flex;
@@ -406,7 +429,7 @@ canvas {
 
 }
 
-
+/* Handball image styles */
 .handball {
   max-width: 100%;
   /* Set the maximum width to fit the grid */
@@ -416,6 +439,8 @@ canvas {
   /* Center the image horizontally */
 }
 
+
+/* Foul image styles */
 .foul {
   width: 100%;
   /* Set the width to fill the grid */
@@ -426,6 +451,7 @@ canvas {
   display: block;
 }
 
+/* Styling for the Positions section */
 .Positions-section {
   display: grid;
   grid-template-columns: repeat(2, 2fr);
@@ -442,6 +468,7 @@ canvas {
   font-size: 1.2rem;
 }
 
+/* Styling for the "Previous" button in the Positions section */
 .pos-sec-prev {
   width: 50%;
   grid-column-start: 2;
@@ -449,12 +476,15 @@ canvas {
 
 }
 
+/* Styling for the "Next" button in the Positions section */
 .pos-sec-Next {
   width: 50%;
   grid-column-start: 2;
   grid-row-start: 2;
 }
 
+
+/* Styling for the positioning display */
 .positioning {
   display: flex;
   justify-content: center;
@@ -462,11 +492,13 @@ canvas {
 
 }
 
-.positioning-img
-{
+
+/* Styling for the positioning image */
+.positioning-img {
   width: auto;
 }
 
+/* Styling for position buttons container */
 .button-position-sec {
   display: flex;
   gap: 10px;
@@ -477,10 +509,9 @@ canvas {
   margin-bottom: 10px;
 }
 
-
+/* Styling for the Soccer Quiz app */
 .app {
   background: rgb(0, 119, 255);
-  /* width: 90%; */
   max-width: 600px;
   margin: 100px auto 100px;
   border-radius: 10px;
@@ -496,6 +527,7 @@ canvas {
   padding-bottom: 30px;
 }
 
+/* Styling for the Quiz section */
 .quiz {
   padding: 20px 0;
 
@@ -507,6 +539,7 @@ canvas {
   font-weight: 600;
 }
 
+/* Styling for quiz answer buttons */
 .btn {
   background: white;
   color: #222;
@@ -518,7 +551,6 @@ canvas {
   text-align: left;
   border-radius: 4px;
   cursor: pointer;
-  transition: all 0.3;
 }
 
 .btn:hover:not([disabled]) {
@@ -530,6 +562,7 @@ canvas {
   cursor: no-drop;
 }
 
+/* Styling for the "Next" button in the quiz */
 #next-btn {
   background: #001e4d;
   color: white;
@@ -544,6 +577,7 @@ canvas {
 
 }
 
+/* Styling for correct and incorrect quiz answers */
 .correct {
   background: #9aeabc;
 }
@@ -552,6 +586,7 @@ canvas {
   background: #ff9393;
 }
 
+/* Display styles for quiz navigation buttons */
 .displaynext {
   display: none !important;
 }
@@ -561,7 +596,7 @@ canvas {
 }
 
 
-
+/* Styling for section headers */
 .section-header {
   text-align: center;
   margin: 0 auto;
@@ -574,7 +609,7 @@ canvas {
   justify-content: center;
 }
 
-
+/* Styling for the footer section */
 footer {
   background-color: #2C4B86;
   color: white;
@@ -583,6 +618,7 @@ footer {
   align-items: center;
 }
 
+/* Styling for the form container */
 .form-container {
   display: flex;
   flex-direction: row;
@@ -595,6 +631,7 @@ footer {
   /* Allow items to wrap */
 }
 
+/* Styling for form groups */
 .form-group {
   margin-bottom: 20px;
 }
@@ -637,6 +674,7 @@ footer>h1 {
   cursor: pointer;
 }
 
+/* Styling for QR code container */
 .qr-code-container {
   display: flex;
   justify-content: center;
@@ -656,12 +694,12 @@ footer>h1 {
   margin-bottom: 20px;
 }
 
-.Credits-bg
-{
+/* Styling for Credits section */
+.Credits-bg {
   background-color: white;
 }
-.Credits-header
-{
+
+.Credits-header {
   color: #2C4B86;
   background-color: white;
   font-weight: 900;
@@ -669,8 +707,8 @@ footer>h1 {
   justify-content: center;
   font-size: 50px;
 }
-.Credits
-{
+
+.Credits {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -678,34 +716,36 @@ footer>h1 {
   /* Set the width to 50% minus some spacing */
   padding-top: 20px;
   font-size: 36px;
-  
+
 
 }
-.Credits>a{
+
+.Credits>a {
   color: white;
 }
 
 .Credits a {
-  color: black; /* Set the desired color for unvisited link */
-  text-decoration: none; /* Remove underline */
+  color: black;
+  /* Set the desired color for unvisited link */
+  text-decoration: none;
+  /* Remove underline */
 }
 
 .Credits a:hover {
-  color: blue; /* Set the color for the link when hovered */
-  text-decoration: underline; /* Add underline on hover if desired */
+  color: blue;
+  /* Set the color for the link when hovered */
+  text-decoration: underline;
+  /* Add underline on hover if desired */
 }
 
-.Credits-background
-{
+.Credits-background {
   background-color: #2C4B86;
 }
 
 
 
-
+/* Keyframe animation for fading */
 /* Adjust font size and styles as needed */
-
-
 @keyframes fade {
   from {
     opacity: .4
@@ -716,6 +756,7 @@ footer>h1 {
   }
 }
 
+/* Media query for smaller screens */
 @media screen and (max-width:800px) {
   nav {
     height: 8.5vh;
@@ -737,12 +778,14 @@ footer>h1 {
     transition: 0.5s ease-in;
 
   }
+
   .form-group input,
   .form-group textarea {
     padding: 7px;
     width: 100%;
 
   }
+
   ul.active {
     left: 0;
 
@@ -751,73 +794,61 @@ footer>h1 {
   .Positions-section>div {
     font-size: 0.85rem;
   }
+
   .menu-icon {
     display: block;
   }
+
   .nav-bar-contents-soccer-img {
     background-size: cover;
     background-position-x: 25%;
   }
 
-  .section-header
-  {
+  .section-header {
     font-size: 50px;
   }
-  .big-text > div
-  {
+
+  .big-text>div {
     font-size: 50px;
   }
+
   .rules-section {
     display: flex;
     flex-wrap: wrap;
 
   }
+
   .player-info {
     display: flex;
     flex-wrap: wrap;
   }
-  .positioning-img
-  {
+
+  .positioning-img {
     width: 100%;
   }
-  .qr-code-container
-  {
+
+  .qr-code-container {
     display: none;
   }
+
   .numbertext {
     font-size: 12px;
     padding: 20px 60px;
     position: absolute;
   }
-  .nested-item-1
-  {
+
+  .nested-item-1 {
     font-size: 1px;
   }
-  .section-header
-  {
+
+  .section-header {
     font-size: 1.5rem;
   }
+
   .nested-item-0 {
 
     border-top: 3px solid #333;
   }
+
+  /* Adjusted styles for smaller screens */
 }
-
-
-/* @media screen and (max-width: 500px) {
-  .nav-bar-contents-soccer-img {
-    background-size: cover;
-    background-position-x: 25%;
-  }
-} */
-
-
-
-/* @media only screen and (max-width: 300px) {
-
-  .prev,
-  .next,
-  .text {
-    font-size: 11px
-  }
-} */

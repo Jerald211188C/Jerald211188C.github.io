@@ -1,7 +1,8 @@
+// Get the menu icon and navigation list elements
 const menuIcon = document.querySelector(".menu-icon");
 const navList = document.querySelector("ul");
 const navLinks = document.querySelectorAll("ul li a"); // Get all navigation links
-
+// Add event listener to toggle the menu icon and navigation list
 menuIcon.addEventListener('click', () => {
   menuIcon.classList.toggle("active");
   navList.classList.toggle("active");
@@ -29,28 +30,6 @@ function toggleStickyNav() {
 
 // Add a scroll event listener to toggle sticky navigation
 window.addEventListener('scroll', toggleStickyNav);
-
-
-
-// const menuIcon = document.querySelector(".menu-icon");
-// const navList = document.querySelector("ul");
-
-// menuIcon.addEventListener('click', () => {
-//   menuIcon.classList.toggle("active");
-//   navList.classList.toggle("active");
-// });
-
-// // Get the navigation element
-// const navElement = document.querySelector('nav');
-
-// // Function to toggle the sticky class based on scroll position
-// function toggleStickyNav() {
-//   if (window.scrollY > navElement.offsetTop) {
-//     navElement.classList.add('sticky');
-//   } else {
-//     navElement.classList.remove('sticky');
-//   }
-// }
 
 // Add event listener to detect scrolling and call the toggleStickyNav function
 window.addEventListener('scroll', toggleStickyNav);
@@ -138,7 +117,6 @@ function updatePlayerInfo() {
   document.getElementById("playerBiography").textContent = player.biography;
 }
 
-// script.js
 const canvas = document.getElementById('offside-canvas');
 const ctx = canvas.getContext('2d');
 
@@ -227,7 +205,7 @@ function animate() {
 
 // Start the animation
 animate();
-
+// Array of quiz questions and answers
 const questions = [
   {
     question: "What Club is Messi in?",
@@ -275,21 +253,21 @@ const questions = [
     ]
   }
 ];
-
+// Get DOM elements
 const questionElement = document.getElementById("question");
 const answerButtons = document.getElementById("answer-buttons");
 const nextButton = document.getElementById("next-btn");
 
 let currentQuestionIndex = 0;
 let score = 0;
-
+// Function to start the quiz
 function startQuiz() {
   currentQuestionIndex = 0;
   score = 0
   nextButton.innerHTML = "Next";
   showQuestion();
 };
-
+// Function to display a question
 function showQuestion() {
   resetState();
   let currentQuestion = questions[currentQuestionIndex];
@@ -307,13 +285,15 @@ function showQuestion() {
     button.addEventListener("click", selectAnswer);
   });
 }
+
+// Function to reset the quiz state
 function resetState() {
   nextButton.style.display = "none";
   while (answerButtons.firstChild) {
     answerButtons.removeChild(answerButtons.firstChild);
   }
 }
-
+// Function to handle answer selection
 function selectAnswer(e) {
   const selectedBtn = e.target;
   const isCorrect = selectedBtn.dataset.correct === "true";
@@ -340,7 +320,7 @@ function showScore() {
   nextButton.innerHTML = "Play Again";
   nextButton.style.display = "block";
 }
-
+// Function to display the final score or proceed to the next question
 function handleNextButton() {
   currentQuestionIndex++;
   if (currentQuestionIndex < questions.length) {
@@ -350,6 +330,7 @@ function handleNextButton() {
     showScore();
   }
 }
+// Event listener for the "Next" button
 nextButton.addEventListener("click", () => {
   if (currentQuestionIndex < questions.length) {
     handleNextButton();
@@ -398,23 +379,3 @@ document.querySelector(".button-position-sec .submit:last-child").addEventListen
 document.addEventListener("DOMContentLoaded", () => {
   showPositionExplanation(currentPositionIndex);
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
