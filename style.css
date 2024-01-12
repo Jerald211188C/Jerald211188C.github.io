@@ -1,0 +1,854 @@
+/* Reset default styles and set global properties */
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+
+/*NavBar*/
+
+/* Navigation Bar styles */
+nav {
+  /* Set navigation bar properties */
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 8.5vh;
+  background-color: #2C4B86;
+  position: relative;
+  /* Add position relative */
+  z-index: 1;
+  /* Add z-index property */
+
+}
+
+
+
+div.logo a {
+  /* Style for logo link */
+  font-size: 3.5vw;
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+
+
+div.logo a:hover {
+  /* Style for logo link on hover */
+  color: lightblue;
+  transition: 0.5s;
+}
+
+/* Sticky navigation bar */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+
+/* Navigation links styles */
+nav ul {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  justify-content: center;
+}
+
+nav ul li {
+  list-style: none;
+  color: white;
+}
+
+nav ul li a {
+  font-size: 2vw;
+  font-weight: 500;
+}
+
+nav ul li a:hover {
+  color: mediumaquamarine;
+  transition: 0.5s;
+}
+
+nav ul li a:visited {
+  color: white;
+  text-decoration: none;
+
+
+}
+
+nav ul li a:active {
+  color: white;
+  text-decoration: none;
+}
+
+nav ul li a:link {
+  color: white;
+  text-decoration: none;
+}
+
+/* Hamburger menu icon styles */
+.menu-icon {
+  display: none;
+  width: 5vw;
+  height: 0.3vh;
+  transform: translateY(-50%);
+  transition: 0.5s;
+  border-radius: 5px;
+  background: white;
+
+}
+
+.menu-icon::before,
+.menu-icon::after {
+  content: "";
+  position: absolute;
+  width: 5vw;
+  height: 0.3vh;
+  background: white;
+  transition: 0.5s;
+}
+
+.menu-icon::before {
+  top: -8px
+}
+
+.menu-icon::after {
+  top: 8px;
+}
+
+
+.menu-icon.active {
+  background: #2C4B86;
+}
+
+.menu-icon.active::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.menu-icon.active::after {
+  top: 0;
+  transform: rotate(135deg);
+}
+
+/*NavBar*/
+
+/* Background image for the header section */
+.soccer-pitch-bg {
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("./Images/pitch.jpg");
+}
+
+/* Big centered text style */
+.big-text {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.big-text>div {
+  color: white;
+  font-size: 100px;
+  font-weight: 900;
+  text-shadow: 10px 10px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* Player information and slideshow section styles */
+.player-info {
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  grid-template-rows: repeat(2, 2fr);
+
+
+}
+
+/* Slideshow container styles */
+.messi {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-row: 1 / span 2;
+}
+
+
+
+
+.nested-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  background-color: white;
+  width: 100%;
+
+}
+
+.nested-grid>div {
+  font-size: 1.2rem;
+  font-weight: 900;
+}
+
+.nested-item-1 {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nested-item-0 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-column: 1 /span 2;
+  border-bottom: 3px solid black;
+
+}
+
+.nested-item-3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 3px solid black;
+  border-right: 3px solid black;
+  border-left: 3px solid black;
+}
+
+.nested-grid-2 {
+  display: grid;
+  grid-template-rows: repeat(2, 0.1fr);
+  max-height: 100%;
+  background-color: white;
+  width: 100%;
+}
+
+.Biography {
+  font-size: 1.2rem;
+  max-height: 100%;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  border-left: 3px solid black;
+  border-right: 3px solid black;
+  border-bottom: 3px solid black;
+
+}
+
+.bio-credits {
+  font-size: 1.2rem;
+}
+
+.bio-credits ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  padding: 8%;
+
+}
+
+.bio-credits a {
+  color: black;
+  /* Set the desired color for unvisited link */
+  text-decoration: none;
+  /* Remove underline */
+}
+
+.bio-credits a:hover {
+  color: blue;
+  /* Set the color for the link when hovered */
+  text-decoration: underline;
+  /* Add underline on hover if desired */
+}
+
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+
+  margin-right: auto;
+  margin-left: auto;
+
+
+}
+
+/* Slideshow item styles */
+.playershow {
+  display: none;
+  text-align: center;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+/* Slideshow image size */
+.Container-size {
+  width: 70%;
+}
+
+/* Next & previous buttons */
+/* Previous and Next buttons styles */
+.prev {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  margin-left: 30%;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  margin-right: 15%;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev {
+  margin-right: 94%;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Fading animation for slideshow */
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: aqua;
+  font-size: 12px;
+  padding: 20px 120px;
+  position: absolute;
+}
+
+/* Rules section styles */
+.rules {
+  background-color: #2C4B86;
+  color: white;
+  font-weight: 900;
+  display: flex;
+  justify-content: center;
+  font-size: 50px;
+}
+
+/* Offside explanation styles */
+.offside {
+  grid-column: 1/ span 2;
+  text-align: center;
+}
+
+.offside-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+
+}
+
+.rules-section {
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+}
+
+/* Canvas styles */
+canvas {
+  max-width: 100%;
+  border: 1px solid #000;
+
+}
+
+/* Additional styles for the canvas */
+#offside-canvas {
+  background-color: #4CAF50;
+}
+
+/* Styles for various elements in offside explanation */
+.last-defender {
+  fill: #0000FF;
+}
+
+.attacker {
+  fill: #FF0000;
+}
+
+.offside-line {
+  stroke: #FFFF00;
+  stroke-width: 2;
+  stroke-dasharray: 5;
+}
+
+.player-text {
+  fill: #FFFFFF;
+  font-size: 15px;
+}
+
+
+/* Explanation for offside rule styles */
+.offside-exp {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: 900;
+  font-size: 1.2rem;
+
+}
+
+/* Handball image styles */
+.handball {
+  max-width: 100%;
+  /* Set the maximum width to fit the grid */
+  display: block;
+  /* Remove extra white space around the image */
+  margin: 0 auto;
+  /* Center the image horizontally */
+}
+
+
+/* Foul image styles */
+.foul {
+  width: 100%;
+  /* Set the width to fill the grid */
+  height: 100%;
+  /* Set the height to fill the grid */
+  object-fit: cover;
+  /* Maintain aspect ratio and fill the container */
+  display: block;
+}
+
+/* Styling for the Positions section */
+.Positions-section {
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+
+}
+
+
+.Positions-section>div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: 900;
+  font-size: 1.2rem;
+}
+
+/* Styling for the "Previous" button in the Positions section */
+.pos-sec-prev {
+  width: 50%;
+  grid-column-start: 2;
+
+
+}
+
+/* Styling for the "Next" button in the Positions section */
+.pos-sec-Next {
+  width: 50%;
+  grid-column-start: 2;
+  grid-row-start: 2;
+}
+
+
+/* Styling for the positioning display */
+.positioning {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+/* Styling for the positioning image */
+.positioning-img {
+  width: auto;
+}
+
+/* Styling for position buttons container */
+.button-position-sec {
+  display: flex;
+  gap: 10px;
+  /* Add some spacing between the buttons */
+  justify-content: center;
+  /* Center the buttons horizontally */
+  grid-column-start: 2;
+  margin-bottom: 10px;
+}
+
+/* Styling for the Soccer Quiz app */
+.app {
+  background: rgb(0, 119, 255);
+  max-width: 600px;
+  margin: 100px auto 100px;
+  border-radius: 10px;
+  padding: 30px;
+
+}
+
+.app h1 {
+  font-size: 25px;
+  color: #001e4d;
+  font-weight: 600;
+  border-bottom: 1px solid #333;
+  padding-bottom: 30px;
+}
+
+/* Styling for the Quiz section */
+.quiz {
+  padding: 20px 0;
+
+}
+
+.quiz h2 {
+  font-size: 18px;
+  color: #001e4d;
+  font-weight: 600;
+}
+
+/* Styling for quiz answer buttons */
+.btn {
+  background: white;
+  color: #222;
+  font-weight: 500;
+  width: 100%;
+  border: 1px solid #222;
+  padding: 10px;
+  margin: 10px 0;
+  text-align: left;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn:hover:not([disabled]) {
+  background: #222;
+  color: white;
+}
+
+.btn:disabled {
+  cursor: no-drop;
+}
+
+/* Styling for the "Next" button in the quiz */
+#next-btn {
+  background: #001e4d;
+  color: white;
+  font-weight: 500;
+  width: 150px;
+  border: 0;
+  padding: 10px;
+  margin: 20px auto 0;
+  border-radius: 4px;
+  cursor: pointer;
+  display: none;
+
+}
+
+/* Styling for correct and incorrect quiz answers */
+.correct {
+  background: #9aeabc;
+}
+
+.incorrect {
+  background: #ff9393;
+}
+
+/* Display styles for quiz navigation buttons */
+.displaynext {
+  display: none !important;
+}
+
+.displayblock {
+  display: block !important;
+}
+
+
+/* Styling for section headers */
+.section-header {
+  text-align: center;
+  margin: 0 auto;
+  padding: 40px 0;
+  font: 300 60px 'Oswald', sans-serif;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Styling for the footer section */
+footer {
+  background-color: #2C4B86;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Styling for the form container */
+.form-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  /* Adjust alignment to flex-start */
+  margin: 0 auto;
+  padding: 20px;
+  flex-wrap: wrap;
+  /* Allow items to wrap */
+}
+
+/* Styling for form groups */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: none;
+  margin-top: 10px;
+}
+
+
+
+footer>h1 {
+  border-bottom: solid 1px;
+}
+
+.button-container {
+  display: flex;
+  gap: 10px;
+  /* Add some spacing between the buttons */
+  justify-content: center;
+  /* Center the buttons horizontally */
+}
+
+.submit {
+  background-color: #001e4d;
+  color: white;
+  font-weight: 500;
+  padding: 10px 20px;
+  border: 0;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Styling for QR code container */
+.qr-code-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 calc(50% - 20px);
+  /* Set the width to 50% minus some spacing */
+  padding-top: 20px;
+}
+
+.qr-code {
+  height: 20vh;
+  max-width: 100%;
+}
+
+/* Adjust the spacing between the form and the QR code */
+.form-container .form-group {
+  margin-bottom: 20px;
+}
+
+/* Styling for Credits section */
+.Credits-bg {
+  background-color: white;
+}
+
+.Credits-header {
+  color: #2C4B86;
+  background-color: white;
+  font-weight: 900;
+  display: flex;
+  justify-content: center;
+  font-size: 50px;
+}
+
+.Credits {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 calc(50% - 20px);
+  /* Set the width to 50% minus some spacing */
+  padding-top: 20px;
+  font-size: 36px;
+
+
+}
+
+.Credits>a {
+  color: white;
+}
+
+.Credits a {
+  color: black;
+  /* Set the desired color for unvisited link */
+  text-decoration: none;
+  /* Remove underline */
+}
+
+.Credits a:hover {
+  color: blue;
+  /* Set the color for the link when hovered */
+  text-decoration: underline;
+  /* Add underline on hover if desired */
+}
+
+.Credits-background {
+  background-color: #2C4B86;
+}
+
+
+
+/* Keyframe animation for fading */
+/* Adjust font size and styles as needed */
+@keyframes fade {
+  from {
+    opacity: .4
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width:800px) {
+  nav {
+    height: 8.5vh;
+  }
+
+  nav ul {
+    position: fixed;
+    top: 50px;
+    left: 100%;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    transition: 0.5s ease-in;
+    background-color: #2C4B86;
+  }
+
+  nav ul li a {
+    font-size: 5vw;
+    transition: 0.5s ease-in;
+
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 7px;
+    width: 100%;
+
+  }
+
+  ul.active {
+    left: 0;
+
+  }
+
+  .Positions-section>div {
+    font-size: 0.85rem;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .nav-bar-contents-soccer-img {
+    background-size: cover;
+    background-position-x: 25%;
+  }
+
+  .section-header {
+    font-size: 50px;
+  }
+
+  .big-text>div {
+    font-size: 50px;
+  }
+
+  .rules-section {
+    display: flex;
+    flex-wrap: wrap;
+
+  }
+
+  .player-info {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .positioning-img {
+    width: 100%;
+  }
+
+  .qr-code-container {
+    display: none;
+  }
+
+  .numbertext {
+    font-size: 12px;
+    padding: 20px 60px;
+    position: absolute;
+  }
+
+  .nested-item-1 {
+    font-size: 1px;
+  }
+
+  .section-header {
+    font-size: 1.5rem;
+  }
+
+  .nested-item-0 {
+
+    border-top: 3px solid #333;
+  }
+
+  /* Adjusted styles for smaller screens */
+}

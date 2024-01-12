@@ -1,119 +1,251 @@
 <!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | CloudComputing</title>
-    <link rel="shortcut icon" href="TemplateData/favicon.ico">
-    <link rel="stylesheet" href="TemplateData/style.css">
-  </head>
-  <body>
-    <div id="unity-container" class="unity-desktop">
-      <canvas id="unity-canvas" width=960 height=600></canvas>
-      <div id="unity-loading-bar">
-        <div id="unity-logo"></div>
-        <div id="unity-progress-bar-empty">
-          <div id="unity-progress-bar-full"></div>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>01_Jerald_211188C_A2</title>
+    <link rel="icon" type="image/x-icon" href="Images/soccerball.webp">
+</head>
+<body>
+    <nav>
+        <!-- Navigation bar containing logo, menu items, and menu icon -->
+        <div class="logo">
+            <!-- Logo with a link to the homepage -->
+            <a href="index.html">Football</a>
         </div>
-      </div>
-      <div id="unity-warning"> </div>
-      <div id="unity-footer">
-        <div id="unity-webgl-logo"></div>
-        <div id="unity-fullscreen-button"></div>
-        <div id="unity-build-title">CloudComputing</div>
-      </div>
+        <ul>
+            <!-- List of navigation menu items -->
+            <li><a href="#players">Players</a></li>
+            <li><a href="#Rules">Rules</a></li>
+            <li><a href="#Positions">Positions</a></li>
+            <li><a href="#Quiz">Quiz</a></li>
+            <!-- Menu icon for mobile navigation -->
+        </ul>
+        <div class="menu-icon"></div>
+    </nav>
+
+    <div class="soccer-pitch-bg">
+        <!-- Background for the main content area with a big text -->
+        <div class="big-text">
+            <div>Where Legends Are Born</div> <!-- Text content -->
+        </div>
     </div>
-    <script>
-      var container = document.querySelector("#unity-container");
-      var canvas = document.querySelector("#unity-canvas");
-      var loadingBar = document.querySelector("#unity-loading-bar");
-      var progressBarFull = document.querySelector("#unity-progress-bar-full");
-      var fullscreenButton = document.querySelector("#unity-fullscreen-button");
-      var warningBanner = document.querySelector("#unity-warning");
+    <div class="rules" id="players">
+        Players <!-- Section title: Players -->
+    </div>
+    <div class="player-info">
+        <!-- Player information section -->
+        <div class="slideshow-container messi">
+            <!-- Slideshow container for player images -->
+            <div class="playershow fade">
+                <div class="numbertext">1 / 3</div><!-- Slide number / Total slides -->
+                <img class="Container-size" src="./Images/messi.jpg" alt="messi image">
+            </div>
 
-      // Shows a temporary message banner/ribbon for a few seconds, or
-      // a permanent error message on top of the canvas if type=='error'.
-      // If type=='warning', a yellow highlight color is used.
-      // Modify or remove this function to customize the visually presented
-      // way that non-critical warnings and error messages are presented to the
-      // user.
-      function unityShowBanner(msg, type) {
-        function updateBannerVisibility() {
-          warningBanner.style.display = warningBanner.children.length ? 'block' : 'none';
-        }
-        var div = document.createElement('div');
-        div.innerHTML = msg;
-        warningBanner.appendChild(div);
-        if (type == 'error') div.style = 'background: red; padding: 10px;';
-        else {
-          if (type == 'warning') div.style = 'background: yellow; padding: 10px;';
-          setTimeout(function() {
-            warningBanner.removeChild(div);
-            updateBannerVisibility();
-          }, 5000);
-        }
-        updateBannerVisibility();
-      }
+            <div class="playershow fade">
+                <div class="numbertext">2 / 3</div>
+                <img class="Container-size" src="./Images/Ronaldo.jpg " alt="Ronaldo image">
+            </div>
 
-      var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/Newnew.loader.js";
-      var config = {
-        dataUrl: buildUrl + "/Newnew.data",
-        frameworkUrl: buildUrl + "/Newnew.framework.js",
-        codeUrl: buildUrl + "/Newnew.wasm",
-        streamingAssetsUrl: "StreamingAssets",
-        companyName: "DefaultCompany",
-        productName: "CloudComputing",
-        productVersion: "1.0",
-        showBanner: unityShowBanner,
-      };
+            <div class="playershow fade">
+                <div class="numbertext">3 / 3</div>
+                <img class="Container-size" src="./Images/ninja.jpg" alt="Mbappe image">
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a> <!-- Previous slide button -->
+            <a class="next" onclick="plusSlides(1)">&#10095;</a> <!-- Next slide button -->
+        </div>
+        <div class="nested-grid">
+            <h1 class="nested-item-0"> Player Infomation</h1> <!-- Subtitle: Player Information -->
+            <div class="nested-item-1" id="playerName">Name: Messi</div>
+            <div class="nested-item-1" id="dateOfBirth">Date of Birth: 24/6/1987</div>
+            <div class="nested-item-1" id="age">Age: 36</div>
+            <div class="nested-item-1" id="CurrentClub">Current Club: Inter Miami</div>
+            <div class="nested-item-1" id="Country">Country: Argentina</div>
+            <div class="nested-item-1" id="Height">Height: 1.70 Meters</div>
+        </div>
 
-      // By default Unity keeps WebGL canvas render target size matched with
-      // the DOM size of the canvas element (scaled by window.devicePixelRatio)
-      // Set this to false if you want to decouple this synchronization from
-      // happening inside the engine, and you would instead like to size up
-      // the canvas DOM size and WebGL render target sizes yourself.
-      // config.matchWebGLToCanvasSize = false;
+        <div class="nested-grid-2">
+            <h1 class="nested-item-3">Biography</h1>
+            <!-- Player biography section -->
+            <div class="Biography" id="playerBiography">Lionel Messi,is an iconic footballer known for his extraordinary
+                <!-- Subtitle: Biography -->
+                talent and numerous
+                records. Rising from FC Barcelona's famed La Masia academy, Messi's mesmerizing skills, countless goals,
+                and individual accolades have cemented his status as one of the greatest players in football history.
+                With a legacy that includes numerous domestic and international titles, he continues to amaze fans and
+                inspire aspiring footballers worldwide.
+            </div>
+            <div class="bio-credits">
+                <ul>
+                    <!-- List of image credits -->
+                    <li>Credits: </li>
+                    <li><a href="https://twitter.com/FIFAWorldCup/status/1604498241021947904" target="_blank">Messi
+                            Image</a></li>
+                    <li><a href="https://twitter.com/RMFC_Frank/status/1626989470963712000" target="_blank">Ronaldo
+                            Image</a></li>
+                    <li> <a href="https://www.gettyimages.com/detail/news-photo/kylian-mbappe-of-paris-saint-germain-during-the-french-news-photo/1242555834"
+                            target="_blank">Mbappe Image</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div>
+        <!-- Section for explaining football rules -->
+        <div class="rules" id="Rules">
+            Rules <!-- Section title: Rules -->
+        </div>
+        <div class="rules-section">
+            <!-- Container for rule explanations -->
+            <div class="offside-visual">
+                <canvas id="offside-canvas"></canvas> <!-- Canvas for visualizing offside rule -->
+            </div>
+            <!-- Explanation of the offside rule -->
+            <div class="offside-exp">The offside rule is a crucial aspect of football that aims to prevent players from
+                gaining an unfair advantage by positioning themselves ahead of the last defender when the ball is played
+                to them. A player is deemed offside if they are closer to the opponent's goal line than both the ball
+                and the second-to-last defender when the ball is passed to them.
+            </div>
+            <div><img class="handball" alt="HandBall image" src="./Images/messi-handball.jpg"></div>
+            <!-- Explanation of the handball rule -->
+            <div class="offside-exp">The handball rule states that players are not allowed to deliberately handle or
+                control the ball with
+                their hands or arms, except for the goalkeeper within their penalty area. If a player handles the ball
+                in an intentional or unnatural manner, it results in a free-kick or penalty kick, depending on the
+                location of the offense.
+            </div>
+            <div><img class="foul" alt="Foul Ball image" src="./Images/foul.jpg"></div>
+            <!-- Explanation of foul and free-kick rules -->
+            <div class="offside-exp">Foul and Free-Kick Rule: Fouls occur when a player makes illegal contact with an
+                opponent, such as tripping, pushing, or using excessive force. Depending on the severity and location of
+                the foul, the opposing team is awarded a free-kick, either direct or indirect. Direct free-kicks allow
+                the team to score directly from the kick, while indirect free-kicks require the ball to touch another
+                player before a goal can be scored.
+            </div>
 
-      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
-        // Mobile device style: fill the whole browser client area with the game canvas:
+        </div>
+    </div>
+    <div>
+        <!-- Section for explaining football positions -->
+        <div class="rules" id="Positions">
+            Positions <!-- Section title: Positions -->
+        </div>
+        <div class="Positions-section">
+            <!-- Container for explaining football positions -->
+            <div class="positioning">
+                <img class="positioning-img" src="./Images/Positions.jpg" alt="Positions Image">
+                <!-- Image depicting positions -->
+            </div>
+            <div class="positions-exp">
+                <!-- Explanation of football positions -->
+                <!-- (Content for explaining positions can be added here) -->
+            </div>
+            <div class="button-position-sec">
+                <!-- Container for navigation buttons -->
+                <button class="submit">Previous</button> <!-- Button for navigating to the previous position -->
+                <button class="submit">Next</button> <!-- Button for navigating to the next position -->
+            </div>
+        </div>
+    </div>
+    <div class="rules" id="Quiz">
+        Quiz <!-- Section title: Quiz -->
+    </div>
+    <div class="app">
+        <!-- Container for the quiz application -->
+        <h1>Soccer Quiz</h1> <!-- Heading for the quiz section -->
+        <div class="quiz">
+            <!-- Container for quiz questions and answers -->
+            <h2 id="question">Question goes here</h2>
+            <div id="answer-buttons">
+                <!-- Container for answer buttons -->
+                <button class="btn">Answer 1</button><!-- Button for selecting answer 1 -->
+                <button class="btn">Answer 2</button><!-- Button for selecting answer 2 -->
+                <button class="btn">Answer 3</button><!-- Button for selecting answer 3 -->
+                <button class="btn">Answer 4</button><!-- Button for selecting answer 4 -->
+            </div>
+            <button id="next-btn">Next</button> <!-- Button for moving to the next question -->
+        </div>
+    </div>
+    <footer>
+        <!-- Footer section containing feedback form -->
+        <h1 class="section-header">Feedback Form</h1><!-- Heading for the feedback form section -->
+        <div class="form-container">
+            <!-- Container for the feedback form -->
+            <form>
+                <!-- Feedback form fields -->
+                <div class="form-group">
+                    <label for="quiz-feedback">How did you find the Quiz?</label><!-- Label for quiz feedback input -->
+                    <input type="text" id="quiz-feedback"><!-- Text input for quiz feedback -->
+                </div>
+                <div class="form-group">
+                    <label for="quiz-score">How Much Did You Score For The
+                        Quiz?</label><!-- Label for quiz score input -->
+                    <input type="text" id="quiz-score"><!-- Text input for quiz score -->
+                </div>
+                <div class="form-group">
+                    <label for="favorite-footballer">Who Is Your Favourite Footballer?</label>
+                    <input type="text" id="favorite-footballer">
+                </div>
+                <!-- Additional form fields for user feedback -->
+                <!-- ... (similarly for other form fields) ... -->
+                <div class="form-group">
+                    <label for="positions-feedback">Is the Explanation Of The Positions Clear? (If No Please
+                        Elaborate)</label>
+                    <input type="text" id="positions-feedback">
+                </div>
+                <div class="form-group">
+                    <label for="rules-feedback">Is the Explanation Of The Rules Clear? (If No Please Elaborate)</label>
+                    <textarea id="rules-feedback"></textarea>
 
-        var meta = document.createElement('meta');
-        meta.name = 'viewport';
-        meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
-        document.getElementsByTagName('head')[0].appendChild(meta);
-        container.className = "unity-mobile";
-        canvas.className = "unity-mobile";
+                </div>
+                <div class="button-container">
+                    <input class="submit" type="submit" value="Submit"><!-- Button for submitting the feedback form -->
+                    <input class="submit" type="reset" value="Clear"><!-- Button for clearing the form fields -->
+                </div>
+                <div class="qr-code-container">
+                    <img class="qr-code" src="./Images/qrcode.png" alt="QR Code"><!-- QR Code image -->
+                </div>
 
-        // To lower canvas resolution on mobile devices to gain some
-        // performance, uncomment the following line:
-        // config.devicePixelRatio = 1;
+            </form>
+        </div>
+    </footer>
+    <div>
+        <!-- Container for credits and references -->
+        <div class="Credits-bg">
+            <!-- Background for credits section -->
+            <div class="Credits-header">
+                Credits <!-- Heading indicating the credits section -->
+            </div>
+            <div class="Credits-background">
+                <div class="Credits"><!-- Background for the list of credits and references -->
+                    <a href="https://fcbayern.com/en" target="_blank">Bayern Stadium</a>
+                    <!-- Credit link for Bayern Stadium with target to open in a new tab -->
+                </div>
+                <div class="Credits">
+                    <a href="https://www.the-sun.com/sport/6886985/messi-handball-argentina-holland-world-cup-yellow-card/"
+                        target="_blank">Messi HandBall</a>
+                    <!-- Credit link for Messi HandBall incident with target to open in a new tab -->
 
-        unityShowBanner('WebGL builds are not supported on mobile devices.');
-      } else {
-        // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
+                </div>
+                <div class="Credits">
+                    <a href="https://finance.yahoo.com/news/jurgen-klopp-hails-best-striker-111249493.html?guccounter=1&guce_referrer=aHR0cHM6Ly9sZW5zLmdvb2dsZS5jb20v&guce_referrer_sig=AQAAAImHgnPzKZPoVPdP3WQ4DTgETcJJaPTlT--K6UbIstrWM4V1DQ83hUGaXD9uecNxFTwD_SU_S49I6gGuEr1bwkI-QMaYuUA2L1rISQlBYj3KW2Do66Jo2u-HxLZ1EnXat-OXAOQqVRyKIT4-9GpWdvdyFu-uQsCgR9t1W_-T3rZz"
+                        target="_blank">Erling Haaland</a>
+                    <!-- Credit link for Erling Haaland with target to open in a new tab -->
 
-        canvas.style.width = "960px";
-        canvas.style.height = "600px";
-      }
+                </div>
+                <div class="Credits">
+                    <a href="https://howtheyplay.com/team-sports/Positions-in-Soccer-and-Their-Roles"
+                        target="_blank">Soccer Positions</a>
+                    <!-- Credit link for Soccer Positions with target to open in a new tab -->
 
-      loadingBar.style.display = "block";
+                </div>
+            </div>
 
-      var script = document.createElement("script");
-      script.src = loaderUrl;
-      script.onload = () => {
-        createUnityInstance(canvas, config, (progress) => {
-          progressBarFull.style.width = 100 * progress + "%";
-        }).then((unityInstance) => {
-          loadingBar.style.display = "none";
-          fullscreenButton.onclick = () => {
-            unityInstance.SetFullscreen(1);
-          };
-        }).catch((message) => {
-          alert(message);
-        });
-      };
-      document.body.appendChild(script);
-    </script>
-  </body>
+        </div>
+    </div>
+
+</body>
+
 </html>
